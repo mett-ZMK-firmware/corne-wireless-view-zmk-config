@@ -9,7 +9,49 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
 
+&mt { tapping-term-ms = <140>; };
+
+&mmv { delay-ms = <200>; };
+
 / {
+    macros {
+        CAD: CAD {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(LA(DEL))>;
+            label = "CAD";
+        };
+
+        PW: PW {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(C) &kp E &kp N7 &kp POUND &kp N2 &kp N0 &kp A &kp N1 &kp N2 &kp N3 &kp N2 &kp N0 &kp N2 &kp N0 &kp N6>;
+            label = "PW";
+        };
+    };
+
+    behaviors {
+        mo_tog: mo_tog {
+            compatible = "zmk,behavior-hold-tap";
+            label = "Hold for momentary and tap for toggle";
+            bindings = <&mo>, <&tog>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+        };
+
+        hr_mt: hr_mt {
+            compatible = "zmk,behavior-hold-tap";
+            label = "Home row hold tap";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <200>;
+            flavor = "tap-preferred";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -22,10 +64,10 @@
 
             display-name = "Base";
             bindings = <
-&kp TAB        &kp Q  &kp W  &kp E         &kp R  &kp T        &kp Y    &kp U  &kp I         &kp O    &kp P     &kp BSPC
-&mt LCTRL ESC  &kp A  &kp S  &kp D         &kp F  &kp G        &kp H    &kp J  &kp K         &kp L    &kp SEMI  &kp SQT
-&kp LSHFT      &kp Z  &kp X  &kp C         &kp V  &kp B        &kp N    &kp M  &kp COMMA     &kp DOT  &kp FSLH  &kp RSHIFT
-                             &kp LEFT_ALT  &mo 1  &kp SPACE    &kp RET  &mo 3  &kp LEFT_GUI
+&kp TAB        &kp Q  &kp W  &kp E         &kp R  &kp T        &kp Y    &kp U           &kp I               &kp O    &kp P     &kp BSPC
+&mt LCTRL ESC  &kp A  &kp S  &kp D         &kp F  &kp G        &kp H    &hr_mt RCTRL J  &hr_mt RIGHT_ALT K  &kp L    &kp SEMI  &kp SQT
+&kp LSHFT      &kp Z  &kp X  &kp C         &kp V  &kp B        &kp N    &kp M           &kp COMMA           &kp DOT  &kp FSLH  &kp RSHIFT
+                             &kp LEFT_ALT  &mo 1  &kp SPACE    &kp RET  &mo 3           &kp LEFT_GUI
             >;
         };
 
