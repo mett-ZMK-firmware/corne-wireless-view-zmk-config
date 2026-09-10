@@ -24,7 +24,7 @@
             label = "CAD";
         };
 
-#include "secret_macros.dtsi"
+        #include "secret_macros.dtsi"
     };
 
     behaviors {
@@ -85,9 +85,9 @@
         num_layer {
             display-name = "Num";
             bindings = <
-&kp GRAVE  &trans  &kp N7  &kp N8  &kp N9  &kp N0       &trans  &kp F7           &kp F8               &kp F9  &kp F10  &kp F11
-&trans     &trans  &kp N4  &kp N5  &kp N6  &kp MINUS    &trans  &hr_mt RCTRL F4  &hr_mt RIGHT_ALT F5  &kp F6  &trans   &kp F12
-&trans     &trans  &kp N1  &kp N2  &kp N3  &kp EQUAL    &trans  &kp F1           &kp F2               &kp F3  &trans   &trans
+&kp GRAVE  &trans  &kp N7  &kp N8  &kp N9  &kp N0       &trans  &kp F7           &kp F8               &kp F9  &kp F10  &trans
+&trans     &trans  &kp N4  &kp N5  &kp N6  &kp MINUS    &trans  &hr_mt RCTRL F4  &hr_mt RIGHT_ALT F5  &kp F6  &kp F11  &trans
+&trans     &trans  &kp N1  &kp N2  &kp N3  &kp EQUAL    &trans  &kp F1           &kp F2               &kp F3  &kp F12  &trans
                            &trans  &to 0   &trans       &trans  &to 0            &trans
             >;
         };
