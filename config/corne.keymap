@@ -65,20 +65,20 @@
         navi_layer {
             display-name = "Navi";
             bindings = <
-&kp GRAVE  &trans  &msc SCRL_UP    &mmv MOVE_UP    &mkp MB1         &trans        &trans            &kp PAGE_UP    &kp UP    &kp HOME   &kp BSLH  &kp DEL
-&trans     &trans  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &kp C_MUTE    &kp C_PLAY_PAUSE  &kp LEFT       &kp DOWN  &kp RIGHT  &kp LBKT  &kp RBKT
-&trans     &trans  &msc SCRL_DOWN  &mkp MB3        &mkp MB2         &kp C_PREV    &kp C_NEXT        &kp PAGE_DOWN  &kp INS   &kp END    &trans    &trans
-                                   &trans          &to 0            &trans        &trans            &to 0          &trans
+&kp GRAVE  &trans  &msc SCRL_UP    &mmv MOVE_UP    &mkp MB1         &trans        &trans      &kp PAGE_UP    &kp UP    &kp HOME   &kp BSLH  &kp DEL
+&trans     &trans  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &kp C_PP      &kp C_NEXT  &kp LEFT       &kp DOWN  &kp RIGHT  &kp LBKT  &kp RBKT
+&trans     &trans  &msc SCRL_DOWN  &mkp MB3        &mkp MB2         &kp C_MUTE    &kp C_PREV  &kp PAGE_DOWN  &kp INS   &kp END    &trans    &trans
+                                   &trans          &to 0            &trans        &trans      &to 0          &trans
             >;
         };
 
         macro_layer {
             display-name = "Macro";
             bindings = <
-&kp GRAVE  &kp LC(F1)  &msc SCRL_UP    &mmv MOVE_UP    &mkp MB1         &kp LA(F4)    &PW               &kp PAGE_UP    &kp UP    &kp HOME   &kp BSLH  &kp DEL
-&trans     &kp CAPS    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &kp C_MUTE    &kp C_PLAY_PAUSE  &kp LEFT       &kp DOWN  &kp RIGHT  &kp LBKT  &kp RBKT
-&trans     &trans      &msc SCRL_DOWN  &mkp MB3        &mkp MB2         &kp C_PREV    &kp C_NEXT        &kp PAGE_DOWN  &kp INS   &kp END    &trans    &trans
-                                       &trans          &trans           &trans        &trans            &to 4          &trans
+&kp GRAVE  &kp LC(F1)  &msc SCRL_UP    &mmv MOVE_UP    &mkp MB1         &kp LA(F4)    &PW         &kp PAGE_UP    &kp UP    &kp HOME   &kp BSLH  &kp DEL
+&trans     &kp CAPS    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &kp C_PP      &kp C_NEXT  &kp LEFT       &kp DOWN  &kp RIGHT  &kp LBKT  &kp RBKT
+&trans     &trans      &msc SCRL_DOWN  &mkp MB3        &mkp MB2         &kp C_MUTE    &kp C_PREV  &kp PAGE_DOWN  &kp INS   &kp END    &trans    &trans
+                                       &trans          &trans           &trans        &trans      &to 4          &trans
             >;
         };
 
